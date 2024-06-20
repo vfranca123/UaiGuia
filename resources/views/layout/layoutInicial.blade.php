@@ -10,17 +10,20 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <title>UaiGuia</title>
+
 </head>
 
 <body>
 
     <div class="mastHead" style="background-image: url('/storage/img/background.jpg')">
+        <div class="color-overlay d-flex justify-content-center align-items-center">
+            <div class="content container h-100 rounded flex-column
+            bg-white-opacity d-flex justify-content-center align-items-center">
 
-        <div class="color-overlay d-flex
-        justify-content-center align-items-center">
-            <div class="content ">@yield('content')</div>
+                @yield('content')
+
+            </div>
         </div>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

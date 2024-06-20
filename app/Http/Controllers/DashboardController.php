@@ -9,5 +9,9 @@ class DashboardController extends Controller
 {
     public function index(){
         return view('inicio');
-        }
+    }
+
+    public function locaisIndex(){
+        return view('locais');
+    }
 }

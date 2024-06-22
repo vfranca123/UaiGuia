@@ -29,7 +29,7 @@ class CadastroController extends Controller
             'fone' => $validated['fone'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['senha']),
-            'tipo_de_conta' => $validated['email']
+            'tipo_de_conta' => $validated['tipo_de_conta']
         ]);
         
         return redirect()->route('login.index')->with('flash','Cadastro feito com sucesso');

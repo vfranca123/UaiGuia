@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CadastroController;
+use App\Http\Controllers\LocalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,6 @@ use App\Http\Controllers\CadastroController;
 */
 Route::get('/',[DashboardController::class, 'index'])->name('index');
 
-Route::get('/locais',[DashboardController::class, 'locaisIndex'])->name('locais.index');
-
 //---login---
 Route::get('/Login',[LoginController::class, 'loginIndex'])->name('login.index');
 Route::get('/login/authenticate', [LoginController::class, 'authenticate'])->name('login.authenticate');
@@ -30,4 +29,10 @@ Route::get('/Cadastro',[CadastroController::class, 'cadastroIndex'])->name('cada
 Route::post('/CadastroStore',[CadastroController::class, 'cadastroStore'])->name('cadastro.store');
 
 //---EndCadastro---
+
+//---Local---
+Route::get('/locais',[LocalController::class, 'locaisIndex'])->name('locais.index');
+Route::get('/adicionarlocail',[LocalController::class, 'adicionarlocalndex'])->name('Adicionarlocal.index')->middleware('auth');
+Route::post('/localStore',[LocalController::class, 'localStore'])->name('local.store')->middleware('auth');
+//---EndLocal---
 

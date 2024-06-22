@@ -1,7 +1,6 @@
 @extends('layout.layoutInicial')
 @section('content')
 
-    @include('shared.flash')
     <h1 class="text-black">Login</h1>
     @if ($errors->any())
         <div class="alert alert-danger">

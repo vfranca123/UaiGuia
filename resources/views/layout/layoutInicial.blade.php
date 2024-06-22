@@ -23,7 +23,15 @@
             <div
                 class="content container h-100 rounded flex-column
             bg-white-opacity d-flex align-items-center">
-
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 @include('shared.flash')
 
                 <button class="btn btn-primary align-self-end m-2" type="button" data-bs-toggle="offcanvas"

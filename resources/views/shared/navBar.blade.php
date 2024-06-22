@@ -4,9 +4,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column">
+        <a href="{{ route('locais.index') }}">Locais</a>
+        <a href="{{ route('Adicionarlocal.index') }}">Adicionar local</a>
         @auth
             <a href="{{ route('logout') }}">Sair</a>
         @endauth
-
+        @guest
+            <a href="{{ route('login.index') }}">Entrar</a>
+        @endguest
     </div>
 </div>

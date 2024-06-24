@@ -9,7 +9,12 @@ use Illuminate\Http\Request;
 class LocalController extends Controller
 {
     public function locaisIndex(){
-        return view('local.locais');
+        $locais=local::orderBy('created_at', 'DESC');
+        
+        
+        return view('local.locais',[
+            'locais'=> $locais->paginate(5)
+        ]);
     }
     public function adicionarlocalndex(){
         return view('local.Adicionalocais');

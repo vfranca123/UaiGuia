@@ -15,4 +15,8 @@ class local extends Model
         'taxa_de_entrada',
     ];
     use HasFactory;
+
+    public function links($local){
+        return view('local.localCard',['local'=>$local]);
+    } 
 }

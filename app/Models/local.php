@@ -18,5 +18,9 @@ class local extends Model
 
     public function links($local){
         return view('local.localCard',['local'=>$local]);
+    }
+    
+    public function Foto(){
+        return $this->hasOne(FotoLocal::class,'foto_id','id');       
     } 
 }

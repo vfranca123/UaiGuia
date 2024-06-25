@@ -4,6 +4,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column">
+        <a href="{{ route('evento.index') }}">Eventos</a>
+        <a href="{{ route('Adicionarevento.index') }}">Adicionar Eventos</a>
         <a href="{{ route('locais.index') }}">Locais</a>
         <a href="{{ route('Adicionarlocal.index') }}">Adicionar local</a>
         @auth

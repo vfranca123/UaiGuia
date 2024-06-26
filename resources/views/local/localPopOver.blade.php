@@ -10,6 +10,7 @@
                 <div class="d-flex w-50"><strong class="text-black">Segmento:</strong><p class="text-primary">{{ $local->segmento }}</p></div>
                 <div class="d-flex w-50"><strong class="text-black">descriçao:</strong><p class="text-primary">{{ $local->descricao }}</p></div>
                 <div class="d-flex w-50"><strong class="text-black">Taxa de entrada:</strong><p class="text-primary">{{ $local->taxa_de_entrada }}$</p></div>
+                <img src="{{$local->getImageURL()}}" alt="Img" class="card" style="width: 15rem;">
             </div>
         </div>
     </div>

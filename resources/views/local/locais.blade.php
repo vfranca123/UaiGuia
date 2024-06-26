@@ -4,9 +4,7 @@
 
     @if (count($locais) > 0)
         @foreach ($locais as $local)
-            
-                {{ $local->links($local) }}
-                
+            {{ $local->links($local) }}
         @endforeach
     @else
         <h1 class="m-4 text-warning">nenhum local encontrado</h1>

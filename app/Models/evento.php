@@ -17,12 +17,16 @@ class evento extends Model
     ];
 
     public function Foto(){
-        return $this->hasOne(FotoEvento::class,'foto_id','id');       
+        return $this->hasOne(FotoEvento::class,'evento_id','id');       
     }
 
     public function getImageURL(){
-        if($this->Foto){
+        if($this->Foto()){
             return asset("storage/{$this->Foto->img}");
         } return null;
+    }
+
+    public function links($evento){
+        return view('evento.eventoCard',['evento'=>$evento]);
     }
 }

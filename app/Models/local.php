@@ -21,6 +21,12 @@ class local extends Model
     }
     
     public function Foto(){
-        return $this->hasOne(FotoLocal::class,'foto_id','id');       
+        return $this->hasOne(FotoLocal::class,'local_id','id');       
     } 
+
+    public function getImageURL(){
+        if($this->Foto()){
+            return asset("storage/{$this->Foto->img}");
+        } return null;
+    }
 }

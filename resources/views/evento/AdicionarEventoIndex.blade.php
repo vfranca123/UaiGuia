@@ -2,9 +2,9 @@
 @section('content')
     @if (Auth::user()->tipo_de_conta === 'adm')
         <h1 class="text-black">Local</h1>
-        <form action="#" class="d-flex flex-column w-50" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('evento.store') }}" class="d-flex flex-column w-50" method="POST" enctype="multipart/form-data">
             @csrf
-
+           
             <h3 class="text-black">Nome:</h3>
             <div class="input-group input-group-lg">
                 <input type="text" class="form-control" aria-label="Sizing example input" name="nome"

@@ -13,10 +13,15 @@ class local extends Model
         'descricao',
         'segmento',
         'taxa_de_entrada',
+
     ];
     use HasFactory;
 
     public function links($local){
+        return view('local.localCard',['local'=>$local]);
+    }
+
+    public function links_escolha($local){
         return view('local.localCard',['local'=>$local]);
     }
     
@@ -28,5 +33,9 @@ class local extends Model
         if($this->Foto()){
             return asset("storage/{$this->Foto->img}");
         } return null;
+    }
+
+    public function rotas($local){
+        return  $this->belongsToMany(Rota::class);
     }
 }

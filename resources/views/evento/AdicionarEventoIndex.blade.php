@@ -1,7 +1,7 @@
 @extends('layout.layout2')
 @section('content')
     @if (Auth::user()->tipo_de_conta === 'adm')
-        <h1 class="text-black">Local</h1>
+        <h1 class="text-black">Evento</h1>
         <form action="{{ route('evento.store') }}" class="d-flex flex-column w-50" method="POST" enctype="multipart/form-data">
             @csrf
            
@@ -27,10 +27,21 @@
                     aria-describedby="inputGroup-sizing-lg">
             </div>
 
-            <h3 class="text-black">Evento</h3>
+            <h3 class="text-black">Local</h3>
             <div class="input-group input-group-lg">
                 <input type="text" class="form-control" aria-label="Sizing example input" name="local"
                     aria-describedby="inputGroup-sizing-lg">
+            </div>
+
+            <h3 class="text-black">Segmento </h3>
+            <div class="input-group">
+                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon"
+                    name="segmento">
+                    <option value="Cultural">Cultural</option>
+                    <option value="Natural">Natural</option>
+                    <option value="Religioso">Religioso</option>
+                    <option value="Gastronomico">Gastronomico</option>
+                </select>
             </div>
 
             <h3 class="text-black">Foto</h3>

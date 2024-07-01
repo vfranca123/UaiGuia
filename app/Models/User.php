@@ -43,4 +43,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function rotas(){
+        return $this->hasMany(Rota::class,'user_id','id');
+    }
 }

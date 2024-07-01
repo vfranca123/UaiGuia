@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\LocalController;
 use App\Http\Controllers\EventoController;
+use App\Http\Controllers\RotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,7 @@ Route::get('/Eventos',[EventoController::class, 'EventoIndex'])->name('evento.in
 Route::get('/adicionarEvento',[EventoController::class, 'AdicionarEventolndex'])->name('Adicionarevento.index')->middleware('auth');
 Route::post('/EventoStore',[EventoController::class, 'EventoStore'])->name('evento.store')->middleware('auth');
 //---EndEvento---
+
+//---Rotas---
+Route::get('/Rotas',[RotaController::class, 'RotasIndex'])->name('rotas.index')->middleware('auth');
+//---EndRotas---

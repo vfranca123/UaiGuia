@@ -1,6 +1,7 @@
 @extends('layout.layoutInicial')
 @section('content')
     <h1 class="text-black">Eventos</h1>
+    
 
     @if (count($eventos) > 0)
         @foreach ($eventos as $evento)

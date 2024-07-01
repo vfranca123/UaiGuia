@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\evento;
-use App\Models\FotoEvento ;
+use App\Models\FotoEvento;
 use Illuminate\Http\Request;
 
 class EventoController extends Controller
@@ -28,7 +28,8 @@ class EventoController extends Controller
                 'local' => 'required|min:8',
                 'descricao' => 'required',
                 'taxa_de_entrada' => 'required',
-                'data'=>'required'
+                'data'=>'required',
+                'segmento'=>'required'
             ]
         );
         $evento = new evento();
@@ -37,7 +38,8 @@ class EventoController extends Controller
             'data' => $validated['data'],
             'descricao' => $validated['descricao'],
             'local' => $validated['local'],
-            'taxa_de_entrada' => $validated['taxa_de_entrada']
+            'taxa_de_entrada' => $validated['taxa_de_entrada'],
+            'segmento' => $validated['segmento']
         ]);
 
         

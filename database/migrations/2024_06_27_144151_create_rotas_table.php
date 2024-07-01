@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
+        Schema::create('rotas', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('data');
-            $table->string('descricao');
-            $table->string('local');
-            $table->string('segmento');
-            $table->integer('taxa_de_entrada');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete(); 
+            $table->integer('quantidade_destinos');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eventos');
+        Schema::dropIfExists('rotas');
     }
 };

@@ -2,16 +2,7 @@
 @section('content')
 
     <h1 class="text-black">Login</h1>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
+    
     <form action="{{ route('login.authenticate') }}" class="d-flex flex-column w-50">
         @csrf
         <h2 class="text-black align-self-start mt-5">Email</h2>

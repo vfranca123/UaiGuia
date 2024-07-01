@@ -13,6 +13,7 @@ class evento extends Model
         'data',
         'descricao',
         'local',
+        'segmento',
         'taxa_de_entrada',
     ];
 

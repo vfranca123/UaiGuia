@@ -10,6 +10,7 @@
                 <div class="d-flex w-50"><strong class="text-black">local:</strong><p class="text-primary">{{ $evento->local }}</p></div>
                 <div class="d-flex w-50"><strong class="text-black">descriçao:</strong><p class="text-primary">{{ $evento->descricao }}</p></div>
                 <div class="d-flex w-50"><strong class="text-black">Taxa de entrada:</strong><p class="text-primary">{{ $evento->taxa_de_entrada }}$</p></div>
+                <div class="d-flex w-50"><strong class="text-black">Segmento:</strong><p class="text-primary">{{ $evento->segmento }}</p></div>
                 <img src="{{$evento->getImageURL()}}" alt="Img" class="card" style="width: 15rem;">
                 
             </div>

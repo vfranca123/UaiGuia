@@ -9,6 +9,7 @@
         <a href="{{ route('locais.index') }}">Locais</a>
         <a href="{{ route('Adicionarlocal.index') }}">Adicionar local</a>
         <a href="{{ route('rotas.index') }}">Minhas Rotas</a>
+        <a href="{{ route('AdicionarRotas.index') }}">Adicionar Rotas</a>
         @auth
             <a href="{{ route('logout') }}">Sair</a>
         @endauth

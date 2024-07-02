@@ -7,6 +7,7 @@ use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\LocalController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\RotaController;
+use App\Http\Controllers\MapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,7 @@ Route::post('/EventoStore',[EventoController::class, 'EventoStore'])->name('even
 
 //---Rotas---
 Route::get('/Rotas',[RotaController::class, 'RotasIndex'])->name('rotas.index')->middleware('auth');
+Route::get('/AdiconarRotas',[RotaController::class, 'AdicionarRotasIndex'])->name('AdicionarRotas.index')->middleware('auth');
+Route::post('/StoreRotas',[RotaController::class, 'AdicionarLocaisStore'])->name('RotasStore.index')->middleware('auth');
 //---EndRotas---
+

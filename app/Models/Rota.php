@@ -11,11 +11,12 @@ class Rota extends Model
 
     protected $fillable=[
         'user_id',
-        'quantidade_destinos'
+        'quantidade_destinos',
+        'nome'
     ];
     
     public function locais(){
-        return $this->belongsToMany(Local::class);
+        return $this->belongsToMany(Local::class, 'destino_rotas', 'rota_id', 'local_id');
     }
     
 }

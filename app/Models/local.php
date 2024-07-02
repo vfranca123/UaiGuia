@@ -22,7 +22,7 @@ class local extends Model
     }
 
     public function links_escolha($local){
-        return view('local.localCard',['local'=>$local]);
+        return view('local.localEscolha',['local'=>$local]);
     }
     
     public function Foto(){
@@ -36,6 +36,6 @@ class local extends Model
     }
 
     public function rotas($local){
-        return  $this->belongsToMany(Rota::class);
+        return $this->belongsToMany(Rota::class, 'destino_rotas', 'local_id', 'rota_id');
     }
 }

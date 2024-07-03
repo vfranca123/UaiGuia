@@ -22,9 +22,9 @@ class evento extends Model
     }
 
     public function getImageURL(){
-        if($this->Foto()){
+        if($this->Foto){
             return asset("storage/{$this->Foto->img}");
-        } return null;
+        }
     }
 
     public function links($evento){

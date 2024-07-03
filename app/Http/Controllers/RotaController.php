@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Rota;
 use App\Models\Local;
+use Illuminate\Support\Facades\Http;
 
 class RotaController extends Controller
 {
@@ -13,7 +14,7 @@ class RotaController extends Controller
     {
         $user = auth()->user();
         $rotas = $user->rotas;
-        return view('rotas.rotas',compact('rotas'));
+        return view('rotas.rotas', compact('rotas'));
     }
 
     public function AdicionarLocaisStore(Request $request)
@@ -59,5 +60,14 @@ class RotaController extends Controller
             'locais' => $locais
         ]);
     }
-}
+    public function map(Rota $rota)
+    {
+        $locais = $rota->locais()->get();
 
+        return view('rotas.map', [
+            'rota' => $rota,
+            'locais' => $locais,
+        ]);
+        
+    }
+}

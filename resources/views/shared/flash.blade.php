@@ -11,16 +11,3 @@
     </div>
 @endif
 
-<script>
-    // Adicionando evento de clique ao botão de fechar
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('.close-flash').addEventListener('click', function() {
-            document.querySelector('#flashMessage').classList.add('fade');
-
-            setTimeout(function() {
-                document.querySelector('#flashMessage').style.display = 'none';
-            }, 500);
-        });
-
-    });
-</script>

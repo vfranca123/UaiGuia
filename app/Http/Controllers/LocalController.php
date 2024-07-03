@@ -25,7 +25,7 @@ class LocalController extends Controller
         $validated = request()->validate(
             [
                 'nome_local' => 'required|min:3|max:26',
-                'endereco' => 'required|min:8',
+                'endereco' => 'required|min:1',
                 'descricao' => 'required',
                 'taxa_de_entrada' => 'required',
                 'segmento'=>'required'

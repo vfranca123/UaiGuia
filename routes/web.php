@@ -48,5 +48,6 @@ Route::post('/EventoStore',[EventoController::class, 'EventoStore'])->name('even
 Route::get('/Rotas',[RotaController::class, 'RotasIndex'])->name('rotas.index')->middleware('auth');
 Route::get('/AdiconarRotas',[RotaController::class, 'AdicionarRotasIndex'])->name('AdicionarRotas.index')->middleware('auth');
 Route::post('/StoreRotas',[RotaController::class, 'AdicionarLocaisStore'])->name('RotasStore.index')->middleware('auth');
+Route::get('/Map/{rota}',[RotaController::class, 'map'])->name('map')->middleware('auth');
 //---EndRotas---
 

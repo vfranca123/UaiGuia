@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,12 +22,8 @@
 <body>
 
     <div class="mastHead" style="background-image: url('/storage/img/background.jpg')">
-
         <div class="color-overlay d-flex justify-content-center align-items-center">
-
-            <div
-                class="content container h-100 rounded flex-column
-            bg-white-opacity d-flex align-items-center">
+            <div class="content container h-100 rounded flex-column bg-white-opacity d-flex align-items-center">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -46,15 +41,12 @@
                 </button>
 
                 @yield('content')
-
             </div>
         </div>
     </div>
     @include('shared.navBar')
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    
 </body>
 
 </html>

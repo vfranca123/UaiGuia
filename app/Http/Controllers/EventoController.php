@@ -10,11 +10,11 @@ use Illuminate\Http\Request;
 class EventoController extends Controller
 {
     public function EventoIndex(){
-        $eventos=evento::orderBy('created_at', 'DESC');
+        $eventos=evento::orderBy('created_at', 'DESC')->get();
         
         
         return view('evento.evento',[
-            'eventos'=> $eventos->paginate(5)
+            'eventos'=> $eventos
         ]);
     }
 

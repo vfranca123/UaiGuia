@@ -1,5 +1,5 @@
 
-<div class="card w-50 mb-3 d-flex flex-row">
+<div class="card w-100 mb-3 d-flex flex-row">
     <div class="card-body">
         <h5 class="card-title m-2">{{ $rota->nome }}</h5>
         <p class="card-text">Quantidade de destinos: {{ $rota->quantidade_destinos }}</p>

@@ -10,12 +10,11 @@ use Illuminate\Http\Request;
 
 class LocalController extends Controller
 {
-    public function locaisIndex(){
-        $locais=local::orderBy('created_at', 'DESC');
+    public function locaisIndex() {
+        $locais = Local::orderBy('created_at', 'DESC')->get();
         
-        
-        return view('local.locais',[
-            'locais'=> $locais->paginate(5)
+        return view('local.locais', [
+            'locais' => $locais
         ]);
     }
     public function adicionarlocalndex(){
@@ -24,20 +23,17 @@ class LocalController extends Controller
     public function localStore(Request $request){
         $validated = request()->validate(
             [
-                'nome_local' => 'required|min:3|max:26',
-                'endereco' => 'required|min:1',
-                'descricao' => 'required',
-                'taxa_de_entrada' => 'required',
-                'segmento'=>'required'
+                'endereco' => 'required|min:1|unique:locals,endereco',
+                'descricao',
+                'taxa_de_entrada',
+                'segmento'
             ]
         );
         $local = new local();
         $local=local::create([
-            'nome_local' => $validated['nome_local'],
+            'nome_local' => $validated['endereco'],
             'endereco' => $validated['endereco'],
-            'descricao' => $validated['descricao'],
-            'segmento' => $validated['segmento'],
-            'taxa_de_entrada' => $validated['taxa_de_entrada']
+           
         ]);
 
         
@@ -55,5 +51,6 @@ class LocalController extends Controller
         
         return redirect()->route('locais.index')->with('flash','Local cadastrado com sucesso');
     }
+
 }
 

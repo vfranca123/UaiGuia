@@ -5,6 +5,7 @@
 .mastHead{
     background-size: cover;
     min-height: 125vh;
+
     position: relative;
     color: white; 
 }

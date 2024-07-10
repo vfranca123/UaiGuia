@@ -17,9 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('nome_local');
             $table->string('endereco');
-            $table->string('descricao');
-            $table->string('segmento');
-            $table->integer('taxa_de_entrada');
             $table->timestamps();
         });
     }

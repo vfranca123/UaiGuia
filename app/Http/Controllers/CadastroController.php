@@ -17,7 +17,7 @@ class CadastroController extends Controller
         $validated = request()->validate(
             [
                 'nome' => 'required|min:3|max:26',
-                'fone' => 'required|min:8|max:14',
+                'fone' => 'required|min:5|max:14',
                 'email' => 'required|email|unique:users,email',
                 'senha' => 'required',
                 'tipo_de_conta'=>'required'

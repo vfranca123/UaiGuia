@@ -54,7 +54,7 @@ class RotaController extends Controller
 
     public function AdicionarRotasIndex()
     {
-        $locais = Local::orderBy('created_at', 'DESC')->paginate(5);
+        $locais = Local::orderBy('created_at', 'DESC')->get();
 
         return view('rotas.AdicionaRota', [
             'locais' => $locais

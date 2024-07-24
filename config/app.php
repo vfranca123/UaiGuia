@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
+use Ladumor\LaravelPwa\Facades\LaravelPwa;
+
+// Exemplo de utilização do Facade
+
+// Agora você pode usar o Facade para acessar os métodos do pacote
+
 
 return [
 
@@ -176,7 +182,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        
     ],
 
     /*
@@ -191,7 +197,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // ...
+      
     ])->toArray(),
 
 ];

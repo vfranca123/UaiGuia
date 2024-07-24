@@ -20,7 +20,8 @@ class RotaController extends Controller
     public function AdicionarLocaisStore(Request $request)
     {
         // Pega o nome da rota do formulário
-        $nomeRota = $request->input('nome');
+        if($request->input('nome'))$nomeRota = $request->input('nome');
+        else $nomeRota = 'rota';
 
         // Pega o usuário autenticado
         $user = auth()->user();
